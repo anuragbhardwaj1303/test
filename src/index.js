@@ -5,9 +5,11 @@ import ReactDom from "react-dom";
 function People() {
   const friends = [
     { name: "Anurag", job: "Developer", age: 29 },
-    { name: "Deepti", job: "Teacher", age: 26 },
+    { name: "Golu", job: "Engineer", age: 25 },
     { name: "Kirti", job: "Doctor", age: 16 },
     { name: "Chiku", job: "Chef", age: 17 },
+    { name: "Deepti", job: "Teacher", age: 25 },
+    { name: "Ashu", job: "Pharmacist", age: 25 },
   ];
   return (
     <section>
@@ -17,6 +19,8 @@ function People() {
       <Person person={friends[1]}></Person>
       <Person person={friends[2]}></Person>
       <Person person={friends[3]}></Person>
+<Person person={friends[4]}></Person>
+<Person person={friends[5]}></Person>
     </section>
   );
 }
