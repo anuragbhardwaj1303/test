@@ -11,7 +11,9 @@ function People() {
   ];
   return (
     <section>
-      <Person person={friends[0]}></Person>
+      <Person person={friends[0]}>
+        <p>Some fucking Content</p>
+      </Person>
       <Person person={friends[1]}></Person>
       <Person person={friends[2]}></Person>
       <Person person={friends[3]}></Person>
@@ -23,6 +25,7 @@ const Person = (props) => {
   return (
     <article>
       <h3> Name: {name} </h3>
+      {props.children}
       <h5> Job: {job} </h5>
       <p> Age: {age} </p>
       <hr></hr>
