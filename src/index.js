@@ -3,22 +3,28 @@ import ReactDom from "react-dom";
 // import "./index.css";
 
 function People() {
+  const friends = [
+    { name: "Anurag", job: "Developer", age: 29 },
+    { name: "Deepti", job: "Teacher", age: 26 },
+    { name: "Kirti", job: "Doctor", age: 16 },
+    { name: "Chiku", job: "Chef", age: 17 },
+  ];
   return (
     <section>
-      <Person name='Anurag' job='Web Dev.' age='19' />
-      <Person name='Deepti' job='Teacher' age='26' />
-      <Person name='Kirti' job='Doctor.' age='16' />
-      <Person name='Golu' job='Engineer' age='25' />
-      <Person name='Chiku' job='Chef' age='17' />
+      <Person person={friends[0]}></Person>
+      <Person person={friends[1]}></Person>
+      <Person person={friends[2]}></Person>
+      <Person person={friends[3]}></Person>
     </section>
   );
 }
 const Person = (props) => {
+  const { name, job, age } = props.person;
   return (
     <article>
-      <h3>Name : {props.name}</h3>
-      <h5>Job : {props.job}</h5>
-      <p>Age : {props.age}</p>
+      <h3> Name: {name} </h3>
+      <h5> Job: {job} </h5>
+      <p> Age: {age} </p>
       <hr></hr>
     </article>
   );
